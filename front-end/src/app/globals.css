@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+@font-face {
+  font-family: 'TT Firs Neue Black';
+  src: url('/fonts/TTFirsNeue-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --cornell-red: #AE1415;
+  --black-bean: #331819;
+  --engineering-orange: #C71517;
+  --caput-mortuum: #4D1F1F;
+  --night: #121212;
+  --background: #3B3B3B;
+  --foreground: #f8c6c6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121212;
+    --foreground: #f8c6c6;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Russo One', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Russo One', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: var(--cornell-red);
+  letter-spacing: -0.02em;
+}
+
+button {
+  border-radius: 999px;
+  font-weight: bold;
+  background: var(--engineering-orange);
+  color: #fff;
+  transition: background 0.2s;
+}
+button:hover {
+  background: var(--cornell-red);
+}
+
+input, textarea, select {
+  background: var(--black-bean);
+  color: #f8c6c6;
+  border: 1px solid var(--caput-mortuum);
+  border-radius: 8px;
+  padding: 0.5em 1em;
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--black-bean);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--caput-mortuum);
+  border-radius: 8px;
+}
+
+.card, .box, .chakra-card {
+  background: var(--black-bean);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px 0 #16151544;
+  border: 1px solid var(--caput-mortuum);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
